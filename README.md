@@ -1,4 +1,4 @@
-# recombination_analysis
+# RECAN
 
 the script simgen.py is useful to test DNA sequences for recombination events. This script creates the same plots as the RAT tool[1] and simplot[2]. The script uses simple pairwise distance between two sequences. Potential recombination event appears as a typical crossover between the two distances of the parental sequences.
 The script was tested by using the alignment of recombinant lumpy skin disease virus genomes (about 150000 bp long). 
