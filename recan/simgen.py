@@ -6,7 +6,6 @@ Created on Tue Jul 31 17:59:26 2018
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
 import pandas as pd
 import plotly.graph_objs as go
-import plotly.plotly as py
 from Bio import AlignIO
 init_notebook_mode(connected=True)
 
@@ -22,8 +21,13 @@ def _pdistance(seq1, seq2):
         if x != y:
             p += 1
     length = len(pairs)
-    return float(1 - p / length)  # '1 - p' to take plot 'upside down'
-
+    try:
+        dist = float(1 - p / length)  # '1 - p' to take plot 'upside down'
+        return dist
+    except ZeroDivisionError as e:
+        print(e, ": perhaps your alignment contains only gaps")
+    
+    
 
 def _draw_simplot(distance_data, tick_container):
     """draws similarity plot"""
@@ -45,7 +49,7 @@ def _draw_simplot(distance_data, tick_container):
     iplot(fig)
 
 
-def simgen(align, pot_rec, window=500, shift=100, region=False, return_data=False):
+def simgen(align, pot_rec, window=500, shift=100, region=False, draw=True):
     """slices the alignment, collects the distance data
 
     Parameters:
@@ -99,12 +103,28 @@ def simgen(align, pot_rec, window=500, shift=100, region=False, return_data=Fals
 
         distance_data[align[par].id] = dist_container
 
-    if return_data:
+    if draw:
         # [1:] to map data to index
-        data = pd.DataFrame(data=distance_data, index=tick_container[1:])
-        return data
-    else:
         _draw_simplot(distance_data, tick_container)
+    else:
+        #data = pd.DataFrame(data=distance_data, index=tick_container[1:])
+        data = distance_data # test line
+        return data
+        
 
-
-simgen("C:\\for_recan_lsdv_1.fasta", pot_rec=2)
+#simgen("C:\\recan\\data\\empty.fasta", pot_rec=1)
+#simgen("C:\\for_recan_lsdv_1.fasta", pot_rec=2)
+        
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
