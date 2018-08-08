@@ -1,8 +1,7 @@
 # Byte-compiled / optimized / DLL files
-**/__pycache__
+__pycache__/
 *.py[cod]
 *$py.class
-*.pyc
 
 # C extensions
 *.so
@@ -48,10 +47,6 @@ coverage.xml
 .hypothesis/
 .pytest_cache/
 
-# Translations
-*.mo
-*.pot
-
 # Sphinx documentation
 docs/_build/
 
@@ -76,5 +71,3 @@ venv.bak/
 # Spyder project settings
 .spyderproject
 .spyproject
-
-
