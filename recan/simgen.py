@@ -39,13 +39,13 @@ def _draw_simplot(distance_data, tick_container):
         data.append(trace)
 
     layout = go.Layout(
-        title="similarity plot",
+        #title="similarity plot",
         xaxis=dict(
-            title="nucleotide position"),
+            title="nucleotide position"),  
         yaxis=dict(
             title="sequence identity"),
-        legend=dict(x=-0.1, y=1.5))
-
+        legend=dict(x=-0.1, y=1.5, orientation="h"))
+        #legend=dict(x=-0.1, y=1.5))
     fig = go.Figure(data=data, layout=layout)
     iplot(fig)
 
@@ -133,8 +133,8 @@ def simgen(align, pot_rec, window=500, shift=100, region=False, draw=True):
     if draw:
         _draw_simplot(distance_data, ticks) 
     else:
-        #data = pd.DataFrame(data=distance_data, index=ticks[1:]) # [1:] to map data to index
-        data = distance_data # test line
+        data = pd.DataFrame(data=distance_data, index=ticks[1:]).T # [1:] to map data to index
+        #data = distance_data # test line
         return data
     
         

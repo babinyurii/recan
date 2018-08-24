@@ -11,7 +11,7 @@ with open("README.md", "r") as fh:
     long_description = fh.read()
 
 setuptools.setup(name='recan',
-      version='0.1',
+      version='1.0',
       author='Yuriy Babin',
       author_email='babin.yurii@gmail.com',
       description='recombination analysis tool',
