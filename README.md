@@ -22,3 +22,7 @@ Import 'simgen' function from the recan package:
 ```
 from recan.simgen import simgen
 ```
+
+
+1. Recombination Analysis Tool (RAT): a program for the high-throughput detection of recombination. Bioinformatics, Volume 21, Issue 3, 1 February 2005, Pages 278–281, https://doi.org/10.1093/bioinformatics/bth500
+2. https://sray.med.som.jhmi.edu/SCRoftware/simplot/ 
