@@ -58,6 +58,7 @@ sim.simgen(window=200, shift=50, pot_rec=1)
 ```
 ![image](https://user-images.githubusercontent.com/28758465/44982136-7eec7a80-af7d-11e8-9bb7-e76935821eaf.png)
 
+![from_repo](data/hbv_1.png)
 
 1. Recombination Analysis Tool (RAT): a program for the high-throughput detection of recombination. Bioinformatics, Volume 21, Issue 3, 1 February 2005, Pages 278–281, https://doi.org/10.1093/bioinformatics/bth500
 2. https://sray.med.som.jhmi.edu/SCRoftware/simplot/ 
