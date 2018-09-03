@@ -56,8 +56,7 @@ The isolate of Ba genotype is the recombinant between the virus of C genotype an
 ```python
 sim.simgen(window=200, shift=50, pot_rec=1)
 ```
-![simgen_hbv_1](https://github.com/babinyurii/RECAN/tree/recan_oop/data/hbv_1.png)
-
+![image](https://user-images.githubusercontent.com/28758465/44982136-7eec7a80-af7d-11e8-9bb7-e76935821eaf.png)
 
 1. Recombination Analysis Tool (RAT): a program for the high-throughput detection of recombination. Bioinformatics, Volume 21, Issue 3, 1 February 2005, Pages 278–281, https://doi.org/10.1093/bioinformatics/bth500
 2. https://sray.med.som.jhmi.edu/SCRoftware/simplot/ 
