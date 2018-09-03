@@ -25,13 +25,13 @@ from recan.simgen import simgen
 
 create an object of the Simgen class. To initialize the object pass your alignment in 'fasta' format as an argument:
 ```python
-sim = Simgen("./data/hbv_C_Bj_Ba.fasta")
+sim_obj = Simgen("./data/hbv_C_Bj_Ba.fasta")
 ```
 The input data are taken from the article by Sugauchi et al.(2002). This paper describes recombination event observed in hepatitis B virus isolates.
 
 The object of the Simgen class has method 'get_info()' which shows information about the alignment. 
 ```python
-sim.get_info()
+sim_obj.get_info()
 ```
 ```
 index:	sequence id:
@@ -54,7 +54,7 @@ Call the method 'simgen' of the Simgen object to draw the plot. Pass the followi
 The isolate of Ba genotype is the recombinant between the virus of C genotype and genotype Bj. Let's plot it. We set genotype Ba as the potential recombinant : 
 
 ```python
-sim.simgen(window=200, shift=50, pot_rec=1)
+sim_obj.simgen(window=200, shift=50, pot_rec=1)
 ```
 
 ![hbv_1](data/hbv_1.png)
@@ -75,7 +75,7 @@ region = (start, end)
 ```
 
 ```python
-sim.simgen(window=200, shift=50, pot_rec=1, region=(1000, 2700))
+sim_obj.simgen(window=200, shift=50, pot_rec=1, region=(1000, 2700))
 ```
 
 ![hbv_slice_1](data/hbv_slice_1.png)
@@ -84,16 +84,11 @@ sim.simgen(window=200, shift=50, pot_rec=1, region=(1000, 2700))
 To customize the plot or just to export and store the data, use 'get_df()' method. 'get_df' returns pandas DataFrame object with sequences as samples, and distances at given points as features. 
 
 ```python
-sim_obj.get_df()
-```
-
-If optional paremeter 'df' is set to 'False', 'get_data' returns dictionary of lists instead of pandas DataFrame object. Each dictionary key is the sequence id, and lists under the keys contain the corresponding distances.
-
-
-```python
 sim_obj.get_data()
 ```
 ![hbv_df_example](data/hbv_df_example.png)
+
+If optional paremeter 'df' is set to 'False', 'get_data' returns dictionary of lists instead of pandas DataFrame object. Each dictionary key is the sequence id, and lists under the keys contain the corresponding distances.
 
 ```python
 sim_obj.get_data(df=False)
