@@ -56,7 +56,6 @@ The isolate of Ba genotype is the recombinant between the virus of C genotype an
 ```python
 sim.simgen(window=200, shift=50, pot_rec=1)
 ```
-![image](https://user-images.githubusercontent.com/28758465/44982136-7eec7a80-af7d-11e8-9bb7-e76935821eaf.png)
 
 ![from_repo](data/hbv_1.png)
 
