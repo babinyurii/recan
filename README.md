@@ -1,5 +1,5 @@
 # RECAN
-RECAN is a Python library to test DNA sequences for recombination events using distance plots. It generates the same distance plots as the RAT[1] and Simplot[2]. It is intended to be used in the Jupyter notebook.
+RECAN is a Python library to test DNA sequences for recombination events using distance plots. It is intended to be used in the Jupyter notebook. It generates the distance plots similar to that created by such tools as RAT[1] and Simplot[2]. 
 
 ## Requirements
 To use RECAN, you will need:
