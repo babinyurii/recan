@@ -128,6 +128,14 @@ plt.show()
 
 ![hbv_matplotlib](data/hbv_matplotlib.png)
 
+
+'simgen()' method has optional parameter 'dist' which denoted method used to calculate pairwise distance. By default its value is set to 'pdist', so 'simgen()' calculates simple pairwise distance. To use Kimura 2 parameter distance set the value of this parameter to 'k2p'
+
+
+```python
+sim.simgen(window=200, shift=50, pot_rec=1, region=(1000, 2700), dist='k2p')
+```
+
 **references**
 
 1. Recombination Analysis Tool (RAT): a program for the high-throughput detection of recombination. Bioinformatics, Volume 21, Issue 3, 1 February 2005, Pages 278–281, https://doi.org/10.1093/bioinformatics/bth500
