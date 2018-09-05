@@ -1,5 +1,6 @@
 import pandas as pd
 import plotly.graph_objs as go
+from Bio import AlignIO
 from Bio.Align import MultipleSeqAlignment
 from Bio.SeqRecord import SeqRecord
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
@@ -52,13 +53,13 @@ class Simgen(MultipleSeqAlignment):
         self._ticks = tick_container
      
     
-    def _move_window(self, window, pot_rec, shift):
+    def _move_window(self, window, pot_rec, shift, dist):
         """moves window"""
         distance_data = {}
         parents = list(range(0, len(self._align)))
         parents.remove(pot_rec)
-        align_length = len(self._align[0, :])
-
+        align_length = len(self._align[0, :])        
+        
         for par in parents:
             dist_container = []
             start = 0
@@ -67,7 +68,13 @@ class Simgen(MultipleSeqAlignment):
             while start < align_length:
                 seq1 = self._align[pot_rec, start:finish].seq # here is a potential recombinant sequence slice
                 seq2 = self._align[par, start:finish].seq  # here's a parent's slice
-                dist_container.append(self._pdistance(seq1, seq2)) #calculate pdistance, append to container
+                
+                if dist == "pdist":
+                    dist_container.append(self._pdistance(seq1, seq2)) #calculate pdistance, append to container
+                elif dist == "k2p":
+                    dist_container.append(self._K2Pdistance(seq1, seq2)) #calculate pdistance, append to container
+
+                
                 start += shift
                 finish = start + window
 
@@ -75,8 +82,44 @@ class Simgen(MultipleSeqAlignment):
 
         self._distance = distance_data  # do i really should return? it's better to get access just right
     
+    def _K2Pdistance(self, seq1, seq2):
+        """
+        Kimura 2-Parameter distance = -0.5 log( (1 - 2p -q) * sqrt( 1 - 2q ) )
+        where:
+        p = transition frequency
+        q = transversion frequency
+        """
+        from math import log, sqrt
+        pairs = []
+        
+        for x in zip(seq1, seq2):
+            if '-' not in x: 
+                pairs.append(x)
 
+        ts_count=0
+        tv_count=0
+        length = len(pairs)
 
+        transitions = [ "AG", "GA", "CT", "TC"]
+        transversions = [ "AC", "CA", "AT", "TA",
+                          "GC", "CG", "GT", "TG" ]
+
+        for (x, y) in pairs:
+            if x + y in transitions: 
+                ts_count += 1 
+            elif x + y in transversions: 
+                tv_count += 1
+
+        p = float(ts_count) / length
+        q = float(tv_count) / length
+        try: 
+            d = -0.5 * log( (1 - 2*p - q) * sqrt( 1 - 2*q ) )
+        except ValueError: 
+            print ("Tried to take log of a negative number")
+            return None
+        return 1 - d
+   
+        
     def _pdistance(self, seq1, seq2):
         """calculates pairwise distance between two sequences"""
         p = 0
@@ -95,8 +138,9 @@ class Simgen(MultipleSeqAlignment):
         except ZeroDivisionError as e:
             print(e, ": perhaps your alignment contains only gaps")
 
-    
-    def simgen(self, pot_rec, window=500, shift=250, region=False):
+            
+            
+    def simgen(self, pot_rec, window=500, shift=250, region=False, dist='pdist'):
         """slices the alignment, collects the distance data
 
         Parameters:
@@ -147,13 +191,13 @@ class Simgen(MultipleSeqAlignment):
         self._get_x_labels(left_border, right_border, shift)
 
         # calculating pairwise distance
-        self._move_window(window, pot_rec, shift)
+        self._move_window(window, pot_rec, shift, dist)
         
         self._draw_simplot()
     
     
     
-    def get_df(self, df=True):
+    def get_data(self, df=True):
         """return pandas DataFrame object"""
         if df:
             return pd.DataFrame(data=self._distance, index=self._ticks[1:]).T
@@ -172,6 +216,8 @@ class Simgen(MultipleSeqAlignment):
             print(counter, value.id, sep="\t")
         print("alignment length: ", self.get_alignment_length())
         #print(self)
+        
+    
         
         
         
