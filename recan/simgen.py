@@ -1,10 +1,14 @@
 import pandas as pd
 import plotly.graph_objs as go
-from Bio import AlignIO
 from Bio.Align import MultipleSeqAlignment
 from Bio.SeqRecord import SeqRecord
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
+
 init_notebook_mode(connected=True)
+
+import matplotlib.pyplot as plt
+
+
 
 
 class Simgen(MultipleSeqAlignment):
@@ -38,7 +42,24 @@ class Simgen(MultipleSeqAlignment):
 
         fig = go.Figure(data=data, layout=layout)
         iplot(fig)
-   
+        
+        
+    def _draw_simplot_mpl(self):
+        """draws similartiy plot using  matplotlib """
+        
+        data = list(self._distance.values())
+        ticks = self._ticks[1:]
+        labels = list(self._distance.keys())
+        #print(data, ticks, labels, sep="\n")
+        
+        plt.figure(figsize=(15, 8))
+        for i in data:
+            plt.plot(range(1, len(i) + 1), i)
+        plt.xticks(list(range(1, len(ticks))), ticks, rotation='vertical')
+        plt.show()
+    
+    
+    
     def _get_x_labels(self, left_border, right_border, shift):
         """creates tick labels"""
 
@@ -140,7 +161,8 @@ class Simgen(MultipleSeqAlignment):
 
             
             
-    def simgen(self, pot_rec, window=500, shift=250, region=False, dist='pdist'):
+    def simgen(self, pot_rec, window=500, shift=250, region=False, dist='pdist',
+               inter=True):
         """slices the alignment, collects the distance data
 
         Parameters:
@@ -155,6 +177,8 @@ class Simgen(MultipleSeqAlignment):
         region: a tuple or a list of two integers
             the region of the alignment to analyze. the start
             and the end nucleotide positions
+        dist: 'pdist' or 'k2p' 
+            pairwise or Kimura methods to calculate distance
        
             """
 
@@ -193,7 +217,11 @@ class Simgen(MultipleSeqAlignment):
         # calculating pairwise distance
         self._move_window(window, pot_rec, shift, dist)
         
-        self._draw_simplot()
+        if inter:
+            self._draw_simplot()
+        else:
+            self._draw_simplot_mpl()
+            
     
     
     
@@ -202,8 +230,7 @@ class Simgen(MultipleSeqAlignment):
         if df:
             return pd.DataFrame(data=self._distance, index=self._ticks[1:]).T
         else:
-            return self._distance
-    
+            return self._ticks[1:], self._distance
     
     
     def get_info(self):
