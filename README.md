@@ -18,7 +18,7 @@ $ pip install .
 
 ## Usage example
 
-Import 'simgen' function from the recan package:
+Import `Simgen` class from the recan package:
 ```python
 from recan.simgen import simgen
 ```
@@ -88,12 +88,16 @@ sim_obj.get_data()
 ```
 ![hbv_df_example](data/hbv_df_example.png)
 
-If optional paremeter 'df' is set to 'False', 'get_data' returns dictionary of lists instead of pandas DataFrame object. Each dictionary key is the sequence id, and lists under the keys contain the corresponding distances.
+If optional paremeter 'df' is set to 'False', 'get_data' returns a tuple containing list of ticks and a dictionary of lists. Each dictionary key is the sequence id, and lists under the keys contain the corresponding distances.
 
 ```python
-sim_obj.get_data(df=False)
+positions, data = sim_obj.get_data(df=False)
 ```
 ```
+print(positions)
+[1050, 1100, 1150, 1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650, 1700, 1750, 1800, 1850, 1900, 1950, 2000, 2050, 2100, 2150, 2200, 2250, 2300, 2350, 2400, 2450, 2500, 2550, 2600, 2650, 2700]
+
+print(data)
 {'AB048704.1_genotype_C_': [0.88, 0.935, 0.925, 0.955, 0.955, 0.965, 0.95, 0.935, 0.94, 0.92, 0.9299999999999999, 0.945, 0.925, 0.945, 0.96, 0.95, 0.975, 0.9733333333333334, 0.96, 0.96], 'AB010291.1_Bj': [0.98, 0.975, 0.97, 0.97, 0.965, 0.95, 0.91, 0.88, 0.85, 0.83, 0.825, 0.865, 0.885, 0.9299999999999999, 0.98, 0.97, 0.98, 0.9733333333333334, 0.96, 0.96]}
 ```
 
