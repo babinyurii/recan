@@ -244,6 +244,14 @@ class Simgen(MultipleSeqAlignment):
         print("alignment length: ", self.get_alignment_length())
         #print(self)
         
+        
+    def save_data(self, path=False):
+        df = pd.DataFrame(data=self._distance, index=self._ticks[1:]).T
+        if path:
+            df.to_csv(path)
+        else:
+            df.to_csv()
+        
     
         
         
