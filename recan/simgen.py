@@ -1,3 +1,11 @@
+""" Simgen realizes the interface to manipulate alignment in Jupyter notebook,
+and to explore recombination events using similarity plots
+"""
+
+
+
+
+
 import pandas as pd
 import plotly.graph_objs as go
 from Bio.Align import MultipleSeqAlignment
