@@ -10,7 +10,7 @@ To use `recan`, you will need:
 - Jupyter notebook
 
 ## Intallation
-Download the repository and unzip it. To install the package  into your Python environment, run from the `recan` folder :
+To install the package via `pip` run :
 
 ```
 $ pip install recan
