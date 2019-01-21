@@ -1,25 +1,30 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Thu Aug  2 12:58:48 2018
+from distutils.core import setup
 
-@author: babin
-"""
-
-import setuptools
-
-with open("README.md", "r") as fh:
-    long_description = fh.read()
-
-setuptools.setup(name='recan',
-      version='0.1',
-      author='Yuriy Babin',
-      author_email='babin.yurii@gmail.com',
-      description='recombination analysis tool',
-      long_description=long_description,
-      long_description_content_type="text/markdown",
-      url='https://github.com/babinyurii/recan',
-      packages=setuptools.find_packages(),
-      classifiers=("Programming Language :: Python :: 3",
-        "License :: OSI Approved :: MIT License",
-        "Operating System :: OS Independent",),)
-    
+setup(
+  name = 'recan',
+  packages = ['recan'],   
+  version = '0.1',      
+  license='MIT',        
+  description = 'recan: recombination analysis tool',   
+  author = 'Yuriy Babin',                  
+  author_email = 'babin.yurii@gmail.com',      
+  url = 'https://github.com/babinyurii/recan', 
+  download_url = 'https://github.com/babinyurii/recan/archive/v_0.1.tar.gz',
+  keywords = ['DNA recombination', 'bioinformatics', 'genetic distance'],   
+  install_requires=[            
+          'pandas',
+          'plotly',
+          'biopython',
+          'matplotlib'
+      ],
+  classifiers=[
+    'Development Status :: 4 - Beta',      
+    'Intended Audience :: Developers',      
+    'Topic :: Software Development :: Build Tools',
+    'License :: OSI Approved :: MIT License',   
+    'Programming Language :: Python :: 3',      
+    'Programming Language :: Python :: 3.4',
+    'Programming Language :: Python :: 3.5',
+    'Programming Language :: Python :: 3.6',
+  ],
+)

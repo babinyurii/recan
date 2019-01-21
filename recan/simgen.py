@@ -4,18 +4,13 @@ and to explore recombination events using similarity plots
 
 
 
-
-
-import pandas as pd
-import plotly.graph_objs as go
 from Bio.Align import MultipleSeqAlignment
 from Bio.SeqRecord import SeqRecord
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot, iplot
-
-init_notebook_mode(connected=True)
-
 import matplotlib.pyplot as plt
-
+import pandas as pd
+import plotly.graph_objs as go
+init_notebook_mode(connected=True)
 
 
 
