@@ -20,7 +20,7 @@ $ pip install recan
 
 Import `Simgen` class from the recan package:
 ```python
-from recan.simgen import simgen
+from recan.simgen import Simgen
 ```
 
 create an object of the Simgen class. To initialize the object pass your alignment in 'fasta' format as an argument:
