@@ -3,7 +3,7 @@
 
 ## Requirements
 To use `recan`, you will need:
-- Python 3.6
+- Python 3
 - Biopython
 - plotly 
 - pandas
@@ -13,7 +13,7 @@ To use `recan`, you will need:
 Download the repository and unzip it. To install the package  into your Python environment, run from the `recan` folder :
 
 ```
-$ pip install .
+$ pip install recan
 ```
 
 ## Usage example
