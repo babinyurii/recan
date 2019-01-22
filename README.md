@@ -47,9 +47,9 @@ We have three sequences in our alignment. 'Simgen' class is based upon the 'Mult
 
 After you've created the object you can draw the similarity plot. 
 Call the method 'simgen' of the Simgen object to draw the plot. Pass the following parameters to the method:
-- 'window': sliding window size. The number of nucleotides the sliding window will span. It has the value of 500 by default.
-- 'shift': this is the step our window slides downstream the alignment. It's value is set to 250 by default
-- 'pot_rec': the index of the potential recombinant: use method 'get_info()' to get the indices, especially if your alignment has many sequences. All the other sequences will be plotted as function of distance to that sequence.
+- `window`: sliding window size. The number of nucleotides the sliding window will span. It has the value of 500 by default.
+- `shift`: this is the step our window slides downstream the alignment. It's value is set to 250 by default
+- `pot_rec`: the index of the potential recombinant: use method 'get_info()' to get the indices, especially if your alignment has many sequences. All the other sequences will be plotted as function of distance to that sequence.
 
 The isolate of Ba genotype is the recombinant between the virus of C genotype and genotype Bj. Let's plot it. We set genotype Ba as the potential recombinant : 
 
@@ -133,7 +133,7 @@ plt.show()
 ![hbv_matplotlib](data/hbv_matplotlib.png)
 
 
-'simgen()' method has optional parameter 'dist' which denoted method used to calculate pairwise distance. By default its value is set to 'pdist', so 'simgen()' calculates simple pairwise distance. To use Kimura 2 parameter distance set the value of this parameter to 'k2p'
+`simgen()` method has optional parameter `dist` which denoted method used to calculate pairwise distance. By default its value is set to `pdist`, so `simgen()` calculates simple pairwise distance. To use Kimura 2 parameter distance set the value of this parameter to `k2p`
 
 
 ```python
