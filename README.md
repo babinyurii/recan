@@ -23,13 +23,13 @@ Import `Simgen` class from the recan package:
 from recan.simgen import Simgen
 ```
 
-create an object of the Simgen class. To initialize the object pass your alignment in 'fasta' format as an argument:
+create an object of the Simgen class. To initialize the object pass your alignment in fasta format as an argument:
 ```python
 sim_obj = Simgen("./data/hbv_C_Bj_Ba.fasta")
 ```
 The input data are taken from the article by Sugauchi et al.(2002). This paper describes recombination event observed in hepatitis B virus isolates.
 
-The object of the Simgen class has method 'get_info()' which shows information about the alignment. 
+The object of the Simgen class has method `get_info()` which shows information about the alignment. 
 ```python
 sim_obj.get_info()
 ```
@@ -42,14 +42,14 @@ alignment length:  3215
 ```
 
 
-We have three sequences in our alignment. 'Simgen' class is based upon the 'MultipleSequenceAlignment' class of the Biopython library.  So, we treat our alignment as the array with n_samples and n_features, where 'samples' are sequences themselves, and the features are columns of nucleotides in the alignment. Index corresponds to the sequence. Note, that indices start with 0.
+We have three sequences in our alignment. `Simgen` class is based upon the `MultipleSequenceAlignment` class of the Biopython library.  So, we treat our alignment as the array with n_samples and n_features, where 'samples' are sequences themselves, and the features are columns of nucleotides in the alignment. Index corresponds to the sequence. Note, that indices start with 0.
 
 
 After you've created the object you can draw the similarity plot. 
-Call the method 'simgen' of the Simgen object to draw the plot. Pass the following parameters to the method:
+Call the method `simgen()` of the Simgen object to draw the plot. Pass the following parameters to the method:
 - `window`: sliding window size. The number of nucleotides the sliding window will span. It has the value of 500 by default.
 - `shift`: this is the step our window slides downstream the alignment. It's value is set to 250 by default
-- `pot_rec`: the index of the potential recombinant: use method 'get_info()' to get the indices, especially if your alignment has many sequences. All the other sequences will be plotted as function of distance to that sequence.
+- `pot_rec`: the index of the potential recombinant: use method `get_info()` to get the indices, especially if your alignment has many sequences. All the other sequences will be plotted as function of distance to that sequence.
 
 The isolate of Ba genotype is the recombinant between the virus of C genotype and genotype Bj. Let's plot it. We set genotype Ba as the potential recombinant : 
 
@@ -69,7 +69,7 @@ The picture from the article is shown below. It's just turned upside down relati
 ![Ba_Bj_C](data/hbv_C_Bj_Ba.jpg)
 
 
-By default 'simgen' method plots the whole alignment. But after initial exploration, we can take a closer look at a particular region by passing the 'region' parameter to the simgen method. We can slice the alignment by using this parameter. 'region' must be a tuple or a list with two integers: the start and the end position of the alignment slice.
+By default `simgen()` method plots the whole alignment. But after initial exploration, we can take a closer look at a particular region by passing the `region` parameter to the simgen method. We can slice the alignment by using this parameter. `region` must be a tuple or a list with two integers: the start and the end position of the alignment slice.
 ```
 region = (start, end)
 ```
@@ -81,14 +81,14 @@ sim_obj.simgen(window=200, shift=50, pot_rec=1, region=(1000, 2700))
 ![hbv_slice_1](data/hbv_slice_1.png)
 
 
-To customize the plot or just to export and store the data, use 'get_df()' method. 'get_df' returns pandas DataFrame object with sequences as samples, and distances at given points as features. 
+To customize the plot or just to export and store the data, use `get_df()` method. `get_df()` returns pandas DataFrame object with sequences as samples, and distances at given points as features. 
 
 ```python
 sim_obj.get_data()
 ```
 ![hbv_df_example](data/hbv_df_example.png)
 
-If optional paremeter 'df' is set to 'False', 'get_data' returns a tuple containing list of ticks and a dictionary of lists. Each dictionary key is the sequence id, and lists under the keys contain the corresponding distances.
+If optional paremeter `df` is set to `False`, `get_data()` returns a tuple containing list of ticks and a dictionary of lists. Each dictionary key is the sequence id, and lists under the keys contain the corresponding distances.
 
 ```python
 positions, data = sim_obj.get_data(df=False)
