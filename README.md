@@ -81,7 +81,7 @@ sim_obj.simgen(window=200, shift=50, pot_rec=1, region=(1000, 2700))
 ![hbv_slice_1](data/hbv_slice_1.png)
 
 
-To customize the plot or just to export and store the data, use `get_df()` method. `get_df()` returns pandas DataFrame object with sequences as samples, and distances at given points as features. 
+To customize the plot or just to export and store the data, use `get_data()` method. `get_data()` returns pandas DataFrame object with sequences as samples, and distances at given points as features. 
 
 ```python
 sim_obj.get_data()
