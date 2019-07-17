@@ -1,5 +1,5 @@
 # recan
-`recan` is a Python package to test DNA sequences for recombination events using distance plots. It is intended to be used in the Jupyter notebook. It generates the distance plots similar to that created by RAT[1] and Simplot[2]. 
+`recan` is a Python package to test nucleotide sequences for recombination events using distance plots. It is intended to be used in the Jupyter notebook. It generates the distance plots similar to that created by RAT[1] and Simplot[2]. 
 
 ## Requirements
 To use `recan`, you will need:
