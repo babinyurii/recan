@@ -101,6 +101,15 @@ print(data)
 {'AB048704.1_genotype_C_': [0.88, 0.935, 0.925, 0.955, 0.955, 0.965, 0.95, 0.935, 0.94, 0.92, 0.9299999999999999, 0.945, 0.925, 0.945, 0.96, 0.95, 0.975, 0.9733333333333334, 0.96, 0.96], 'AB010291.1_Bj': [0.98, 0.975, 0.97, 0.97, 0.965, 0.95, 0.91, 0.88, 0.85, 0.83, 0.825, 0.865, 0.885, 0.9299999999999999, 0.98, 0.97, 0.98, 0.9733333333333334, 0.96, 0.96]}
 ```
 
+`recan` can handle quite large alignment. Here's the alignment of 145000 bp genome of lumpy skin disease virus.
+```python
+sim_lsdv = Simgen("./data/1_lsdv_long_genomes.fasta")
+sim_lsdv.simgen(window=1000, shift=50, pot_rec=1)
+```
+![lsdv](data/lsdv.png)
+
+
+
 Once you've returned the data, you can easily customize the plot by using your favourite plotting library:
 
 ```python
