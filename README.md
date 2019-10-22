@@ -33,13 +33,13 @@ The object of the Simgen class has method `get_info()` which shows information a
 ```python
 sim_obj.get_info()
 ```
-`
+```
 index:	sequence id:
 0	AB048704.1_genotype_C_
 1	AB033555.1_Ba
 2	AB010291.1_Bj
 alignment length:  3215
-`
+```
 
 
 We have three sequences in our alignment. `Simgen` class is based upon the `MultipleSequenceAlignment` class of the Biopython library.  So, we treat our alignment as the array with n_samples and n_features, where 'samples' are sequences themselves, and the features are columns of nucleotides in the alignment. Index corresponds to the sequence. Note, that indices start with 0.
@@ -93,13 +93,13 @@ If optional paremeter `df` is set to `False`, `get_data()` returns a tuple conta
 ```python
 positions, data = sim_obj.get_data(df=False)
 ```
-`
+```
 print(positions)
 [1050, 1100, 1150, 1200, 1250, 1300, 1350, 1400, 1450, 1500, 1550, 1600, 1650, 1700, 1750, 1800, 1850, 1900, 1950, 2000, 2050, 2100, 2150, 2200, 2250, 2300, 2350, 2400, 2450, 2500, 2550, 2600, 2650, 2700]
 
 print(data)
 {'AB048704.1_genotype_C_': [0.88, 0.935, 0.925, 0.955, 0.955, 0.965, 0.95, 0.935, 0.94, 0.92, 0.9299999999999999, 0.945, 0.925, 0.945, 0.96, 0.95, 0.975, 0.9733333333333334, 0.96, 0.96], 'AB010291.1_Bj': [0.98, 0.975, 0.97, 0.97, 0.965, 0.95, 0.91, 0.88, 0.85, 0.83, 0.825, 0.865, 0.885, 0.9299999999999999, 0.98, 0.97, 0.98, 0.9733333333333334, 0.96, 0.96]}
-`
+```
 
 Once you've returned the data, you can easily customize the plot by using your favourite plotting library:
 
