@@ -137,7 +137,12 @@ plt.show()
 
 
 ```python
-sim.simgen(window=200, shift=50, pot_rec=1, region=(1000, 2700), dist='k2p')
+sim_obj.simgen(window=200, shift=50, pot_rec=1, region=(1000, 2700), dist='k2p')
+```
+
+to save the distance data in excel or csv format use the method `save_data()`:
+```python
+sim_obj.save_data(out="excel", out_name="hbv_distance_data")
 ```
 
 **references**
