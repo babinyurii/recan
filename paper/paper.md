@@ -19,6 +19,10 @@ Recan code is organized using OOP paradigm. Simgen class is inherited from the M
 To test the package we used the nucleotide sequences which contain recombination events detected using the same method implemented in other tools. We’ve found that recan works fast both using short virus genome alignments, as hepatitis B virus, and long ones, as the lumpy skin disease virus genome which is about 150 000 bp in length. Recan produces the same output when compared to available tools (RAT, Simplot, RD4) which have the implementation of the distance methods. 
 Recan can be installed by pip Python package manager using ‘pip install recan’ command. The source code and guide are available at https://github.com/babinyurii/recan.
 
+# Overview
+
+# Availability and implementation
+recan is written in Python 3 and supported on Windows and Linux operating systems. The source code, manual and example files are abailable on GitHub (https://github.com/babinyurii/recan). 
 
 # Citations
 
