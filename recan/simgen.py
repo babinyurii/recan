@@ -4,11 +4,10 @@ and to explore recombination events using similarity plots
 
 from Bio.Align import MultipleSeqAlignment
 from Bio.SeqRecord import SeqRecord
-from plotly.offline import init_notebook_mode, iplot
 #import matplotlib.pyplot as plt
 import pandas as pd
+from plotly.offline import init_notebook_mode, iplot
 import plotly.graph_objs as go
-init_notebook_mode()
 
 
 
@@ -50,7 +49,7 @@ class Simgen(MultipleSeqAlignment):
     
     def _draw_simplot(self):
         """draws similarity plot using plotly"""
-
+        init_notebook_mode()
         data = []
         for key in self._distance.keys():
             trace = go.Scatter(y=self._distance[key], x=self._ticks, name=key)

@@ -10,7 +10,7 @@ import unittest
 from test_results import dist_whole_align_ref, dist_win_250_shift_100_ref, dist_whole_align_def_params_k2p
 import sys
 sys.path.append("..")
-from recan.simgen import Simgen._
+from recan.simgen import Simgen
 
 
 class DistTestCase(unittest.TestCase):
