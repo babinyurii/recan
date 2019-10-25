@@ -101,15 +101,6 @@ print(data)
 {'AB048704.1_genotype_C_': [0.88, 0.935, 0.925, 0.955, 0.955, 0.965, 0.95, 0.935, 0.94, 0.92, 0.9299999999999999, 0.945, 0.925, 0.945, 0.96, 0.95, 0.975, 0.9733333333333334, 0.96, 0.96], 'AB010291.1_Bj': [0.98, 0.975, 0.97, 0.97, 0.965, 0.95, 0.91, 0.88, 0.85, 0.83, 0.825, 0.865, 0.885, 0.9299999999999999, 0.98, 0.97, 0.98, 0.9733333333333334, 0.96, 0.96]}
 ```
 
-`recan` can handle quite large alignment. Here's the alignment of 145000 bp genome of lumpy skin disease virus.
-```python
-sim_lsdv = Simgen("./data/1_lsdv_long_genomes.fasta")
-sim_lsdv.simgen(window=1000, shift=50, pot_rec=1)
-```
-![lsdv](data/lsdv.png)
-
-
-
 Once you've returned the data, you can easily customize the plot by using your favourite plotting library:
 
 ```python
@@ -157,8 +148,29 @@ If there are about 20 or 30 sequences in the input file and their names are long
 
 ![hbv_short_names](data/short_names.png)
 
+Here are some examples of recombinations previously described to illustrate how typical breakpoints may look like.
+Putative recombinations in the of 145000 bp genome of lumpy skin disease virus [4]:
+
+![lsdv](data/lsdv_rec.png)
+
+Recombination in HIV genome [5]:
+![hiv](data/hiv_rec_kal153.png)
+
+HCV intergenotype recombinant 2k/1b [6]:
+![hcv](data/hcv_2k_1b_rec.png)
+
+Norovirus recombinant isolate [7]:
+![norovirus](data/norovirus_rec.png)
+
 **references**
 
-1. Recombination Analysis Tool (RAT): a program for the high-throughput detection of recombination. Bioinformatics, Volume 21, Issue 3, 1 February 2005, Pages 278–281, https://doi.org/10.1093/bioinformatics/bth500
+1. Recombination Analysis Tool (RAT): a program for the high-throughput detection of recombination. Bioinformatics, Volume 21, Issue 3,
+1 February 2005, Pages 278–281, https://doi.org/10.1093/bioinformatics/bth500
 2. https://sray.med.som.jhmi.edu/SCRoftware/simplot/ 
-3.  Hepatitis B Virus of Genotype B with or without Recombination with Genotype C over the Precore Region plus the Core Gene. Fuminaka Sugauchi et al. JOURNAL OF VIROLOGY, June 2002, p. 5985–5992. 10.1128/JVI.76.12.5985-5992.2002 https://jvi.asm.org/content/76/12/5985 
+3.  Hepatitis B Virus of Genotype B with or without Recombination with Genotype C over the Precore Region plus the Core Gene. Fuminaka Sugauchi et al. JOURNAL OF VIROLOGY, June 2002, p. 5985–5992. 10.1128/JVI.76.12.5985-5992.2002 https://jvi.asm.org/content/76/12/5985
+4. Sprygin A, Babin Y, Pestova Y, Kononova S, Wallace DB, Van Schalkwyk A, et al. (2018) Analysis and insights into recombination signals in lumpy skin disease virus recovered in the field. PLoS ONE 13(12): e0207480. https://doi.org/ 10.1371/journal.pone.0207480
+5. Liitsola,K., Holm,K., Bobkov,A., Pokrovsky,V., Smolskaya,T., Leinikki,P., Osmanov,S. and Salminen,M. (2000) An AB recom- binant and its parental HIV type 1 strains in the area ofthe former Soviet Union: low requirements for sequence identity in recom- bination. UNAIDS Virus Isolation Network. AIDS Res. Hum. Retroviruses, 16, 1047–1053.
+6. Smith, D. B., Bukh, J., Kuiken, C., Muerhoff, A. S., Rice, C. M., Stapleton, J. T., & Simmonds, P. (2014). Expanded classification of hepatitis C virus into 7 genotypes and 67 subtypes: Updated criteria and genotype assignment web resource. Hepatology, 59(1), 318–327. https://doi.org/10.1002/hep.26744
+7. Jiang,X., Espul,C., Zhong,W.M., Cuello,H. and Matson,D.O. (1999) Characterization of a novel human calicivirus that may be a naturally occurring recombinant. Arch. Virol., 144, 2377–2387.
+
+
