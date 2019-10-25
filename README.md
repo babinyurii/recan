@@ -1,5 +1,5 @@
 # recan
-`recan` is a Python package to test nucleotide sequences for recombination events using distance plots. It is intended to be used in the Jupyter notebook. It generates the distance plots similar to that created by RAT[1] and Simplot[2]. 
+`recan` is a Python package to test nucleotide sequences for recombination events using distance plots. This method has been previously implemented in desktop software tools: RAT[1], Simplot[2] and RDP4 [8]. 
 
 ## Requirements
 To use `recan`, you will need:
@@ -17,7 +17,7 @@ $ pip install recan
 `
 
 ## Usage example
-
+The package is intended to be used in Jupyter notebook.  
 Import `Simgen` class from the recan package:
 ```python
 from recan.simgen import Simgen
@@ -172,5 +172,6 @@ Norovirus recombinant isolate [7]:
 5. Liitsola,K., Holm,K., Bobkov,A., Pokrovsky,V., Smolskaya,T., Leinikki,P., Osmanov,S. and Salminen,M. (2000) An AB recom- binant and its parental HIV type 1 strains in the area ofthe former Soviet Union: low requirements for sequence identity in recom- bination. UNAIDS Virus Isolation Network. AIDS Res. Hum. Retroviruses, 16, 1047–1053.
 6. Smith, D. B., Bukh, J., Kuiken, C., Muerhoff, A. S., Rice, C. M., Stapleton, J. T., & Simmonds, P. (2014). Expanded classification of hepatitis C virus into 7 genotypes and 67 subtypes: Updated criteria and genotype assignment web resource. Hepatology, 59(1), 318–327. https://doi.org/10.1002/hep.26744
 7. Jiang,X., Espul,C., Zhong,W.M., Cuello,H. and Matson,D.O. (1999) Characterization of a novel human calicivirus that may be a naturally occurring recombinant. Arch. Virol., 144, 2377–2387.
+8. Martin, D. P., Murrell, B., Golden, M., Khoosal, A., & Muhire, B. (2015). RDP4: Detection and analysis of recombination patterns in virus genomes. Virus Evolution, 1(1), 1–5. https://doi.org/10.1093/ve/vev003
 
 
