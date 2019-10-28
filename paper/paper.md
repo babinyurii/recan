@@ -41,11 +41,11 @@ _Figure 1. HIV recombinant strain AF193276 between sequences AF193275 and AF1932
 
 _Figure 2. HCV intergenotype recombinant 2k/1b_
 
-![](pictures/lsdv_rec)
+![](pictures/lsdv_rec.png)
 
 _Figure 3. Norovirus  recombinant AF190817 between parental sequences U22498 and X86557_
 
-![](pictures/norovirus_rec)
+![](pictures/norovirus_rec.png)
 
 _Figure 4. LSDV recombinant vaccine-like strain LSDV RUSSIA/Saratov/2017 between AF193275 and KY829023_
 
