@@ -57,7 +57,7 @@ The isolate of Ba genotype is the recombinant between the virus of C genotype an
 sim_obj.simgen(window=200, shift=50, pot_rec=1)
 ```
 
-![hbv_1](data/hbv_1.png)
+![hbv_1](pictures/hbv_1.png)
 
 
 Potential recombinant is not shown in the plot, as the distances are calculated relative to it. The higher is the distance function (i.e. the closer to 1), the closer is the sequence to the recombinant and vice versa. 
@@ -66,7 +66,7 @@ We can see typical 'crossover' of the distances which is the indicator of the po
 
 The picture from the article is shown below. It's just turned upside down relative to our plot, and instead of distance drop we see distance rising. Here Bj 'goes away' from the genotype C, whereas Ba keeps the same distance
 
-![Ba_Bj_C](data/hbv_C_Bj_Ba.jpg)
+![Ba_Bj_C](pictures/hbv_C_Bj_Ba.jpg)
 
 
 By default `simgen()` method plots the whole alignment. But after initial exploration, we can take a closer look at a particular region by passing the `region` parameter to the simgen method. We can slice the alignment by using this parameter. `region` must be a tuple or a list with two integers: the start and the end position of the alignment slice.
@@ -78,7 +78,7 @@ region = (start, end)
 sim_obj.simgen(window=200, shift=50, pot_rec=1, region=(1000, 2700))
 ```
 
-![hbv_slice_1](data/hbv_slice_1.png)
+![hbv_slice_1](pictures/hbv_slice_1.png)
 
 
 To customize the plot or just to export and store the data, use `get_data()` method. `get_data()` returns pandas DataFrame object with sequences as samples, and distances at given points as features. 
@@ -86,7 +86,7 @@ To customize the plot or just to export and store the data, use `get_data()` met
 ```python
 sim_obj.get_data()
 ```
-![hbv_df_example](data/hbv_df_example.png)
+![hbv_df_example](pictures/hbv_df_example.png)
 
 If optional paremeter `df` is set to `False`, `get_data()` returns a tuple containing list of ticks and a dictionary of lists. Each dictionary key is the sequence id, and lists under the keys contain the corresponding distances.
 
@@ -130,7 +130,7 @@ plt.legend(prop={"size":20})
 plt.show()
 ```
 
-![hbv_matplotlib](data/hbv_matplotlib.png)
+![hbv_matplotlib](pictures/hbv_matplotlib.png)
 
 
 `simgen()` method has optional parameter `dist` which denoted method used to calculate pairwise distance. By default its value is set to `pdist`, so `simgen()` calculates simple pairwise distance. To use Kimura 2 parameter distance set the value of this parameter to `k2p`
@@ -146,21 +146,21 @@ sim_obj.save_data(out="excel", out_name="hbv_distance_data")
 ```
 If there are about 20 or 30 sequences in the input file and their names are long, legend element may hide the plot. So, to be able to analyze many sequences at once, it's better to use short consice sequence names instead of long ones. Like this:
 
-![hbv_short_names](data/short_names.png)
+![hbv_short_names](pictures/short_names.png)
 
 Here are some examples of recombinations previously described to illustrate how typical breakpoints may look like.
 Putative recombinations in the of 145000 bp genome of lumpy skin disease virus [4]:
 
-![lsdv](data/lsdv_rec.png)
+![lsdv](pictures/lsdv_rec.png)
 
 Recombination in HIV genome [5]:
-![hiv](data/hiv_rec_kal153.png)
+![hiv](pictures/hiv_rec_kal153.png)
 
 HCV intergenotype recombinant 2k/1b [6]:
-![hcv](data/hcv_2k_1b_rec.png)
+![hcv](pictures/hcv_2k_1b_rec.png)
 
 Norovirus recombinant isolate [7]:
-![norovirus](data/norovirus_rec.png)
+![norovirus](pictures/norovirus_rec.png)
 
 **references**
 
