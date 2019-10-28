@@ -2,12 +2,15 @@
 title: 'Recan: Python tool for detection recombination events in viral genomes'
 tags:
   - Python
-  - biology
+  - recombination
+  - virology
 authors:
   - name: Yuriy Babin
     orcid: 0000-0002-7524-5921
-    affiliation: 
+    affiliation: 1
 affiliations:
+  - name: viral hepatitis laboratory, Central Research Institute of Epidemiology, Moscow, Russia
+  index: 1
 date:  November 2019
 bibliography: paper.bib
 ---
