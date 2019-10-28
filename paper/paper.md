@@ -1,5 +1,5 @@
 ---
-title: 'Recan: A Python package for recombination events analysis by distance plotting'
+title: 'Recan: Python tool for detection recombination events in viral genomes'
 tags:
   - Python
   - biology
