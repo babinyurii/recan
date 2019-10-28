@@ -33,13 +33,21 @@ Recombination events in datasets detected by recan are shown in Figures 1-4.
 # Availability and implementation
 Recan can be installed by pip Python package manager using `pip install recan` command. The source code, guide and datasets used in the study are available at https://github.com/babinyurii/recan. Recan is supported on Linux and Windows.
 
-![](hiv_rec_kal153.png)
+![](pictures/hiv_rec_kal153.png)
+
 _Figure 1. HIV recombinant strain AF193276 between sequences AF193275 and AF193278_
-![]( hcv_2k_1b_rec.png)
+
+![](pictures/hcv_2k_1b_rec.png)
+
 _Figure 2. HCV intergenotype recombinant 2k/1b_
-![](lsdv_rec)
+
+![](pictures/lsdv_rec)
+
 _Figure 3. Norovirus  recombinant AF190817 between parental sequences U22498 and X86557_
-![](norovirus_rec)
+
+![](pictures/norovirus_rec)
+
 _Figure 4. LSDV recombinant vaccine-like strain LSDV RUSSIA/Saratov/2017 between AF193275 and KY829023_
+
 
 # References
