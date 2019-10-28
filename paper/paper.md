@@ -1,4 +1,25 @@
 ---
+title: 'Recan: Python tool for detection for detection recombination events in viral genomes'
+tags:
+- Python
+- virology
+- recombination
+authors:
+- name Yuriy Babin
+- orcid: 0000-0002-7524-5921
+- affiliation: 1
+affiliation:
+- name: viral hepatitis laboratory, Central Research Institute of Epidemiology, Moscow, Russia
+index: 1
+date: 
+bibliography: paper.bib
+---
+
+
+
+
+
+---
 title: 'Recan: Python tool for detection recombination events in viral genomes'
 tags:
   - Python
@@ -11,9 +32,10 @@ authors:
 affiliations:
   - name: viral hepatitis laboratory, Central Research Institute of Epidemiology, Moscow, Russia
   index: 1
-date:  November 2019
+date: 28 November 2019
 bibliography: paper.bib
 ---
+
 # Summary
 
 Recombination is widespread in viruses and is considered to  be one of the mechanisms that drives viral evolutionary changes and helps viruses to overcome selective pressure and adapt to new environments (Pérez-Losada et al., 2015).
