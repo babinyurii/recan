@@ -16,26 +16,6 @@ bibliography: paper.bib
 ---
 
 
-
-
-
----
-title: 'Recan: Python tool for detection recombination events in viral genomes'
-tags:
-  - Python
-  - recombination
-  - virology
-authors:
-  - name: Yuriy Babin
-    orcid: 0000-0002-7524-5921
-    affiliation: 1
-affiliations:
-  - name: viral hepatitis laboratory, Central Research Institute of Epidemiology, Moscow, Russia
-  index: 1
-date: 28 November 2019
-bibliography: paper.bib
----
-
 # Summary
 
 Recombination is widespread in viruses and is considered to  be one of the mechanisms that drives viral evolutionary changes and helps viruses to overcome selective pressure and adapt to new environments (Pérez-Losada et al., 2015).
@@ -58,14 +38,18 @@ Recombination events in datasets detected by recan are shown in Figures 1-4.
 # Availability and implementation
 Recan can be installed by pip Python package manager using `pip install recan` command. The source code, guide and datasets used in the study are available at https://github.com/babinyurii/recan. Recan is supported on Linux and Windows.
 
+
 ![](pictures/hiv_rec_kal153.png)
 _Figure 1. HIV recombinant strain AF193276 between sequences AF193275 and AF193278._
+
 
 ![](pictures/hcv_2k_1b_rec.png)
 _Figure 2. HCV intergenotype recombinant 2k/1b._
 
+
 ![](pictures/lsdv_rec.png)
 _Figure 3. Norovirus  recombinant AF190817 between parental sequences U22498 and X86557._
+
 
 ![](pictures/norovirus_rec.png)
 _Figure 4. LSDV recombinant vaccine-like strain LSDV RUSSIA/Saratov/2017 between sequences AF193275 and KY829023._
