@@ -11,7 +11,7 @@ authors:
 affiliation:
 - name: viral hepatitis laboratory, Central Research Institute of Epidemiology, Moscow, Russia
 index: 1
-date: 
+date: 29 November 2019
 bibliography: paper.bib
 ---
 
