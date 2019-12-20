@@ -1,11 +1,11 @@
 ---
 title: 'Recan: Python tool for detection of recombination events in viral genomes'
 tags:
-- Python
-- virology
-- recombination
+  - Python
+  - virology
+  - recombination
 authors:
-- name Yuriy Babin
+- name: Yuriy Babin
   orcid: 0000-0002-7524-5921
   affiliation: "1"
 affiliations:
