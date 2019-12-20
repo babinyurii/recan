@@ -6,11 +6,11 @@ tags:
 - recombination
 authors:
 - name Yuriy Babin
-- orcid: 0000-0002-7524-5921
-- affiliation: 1
-affiliation:
+  orcid: 0000-0002-7524-5921
+  affiliation: "1"
+affiliations:
 - name: viral hepatitis laboratory, Central Research Institute of Epidemiology, Moscow, Russia
-index: 1
+  index: 1
 date: 29 November 2019
 bibliography: paper.bib
 ---
