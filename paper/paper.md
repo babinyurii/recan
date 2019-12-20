@@ -1,5 +1,5 @@
 ---
-title: 'Recan: Python tool for detection for detection recombination events in viral genomes'
+title: 'Recan: Python tool for detection of recombination events in viral genomes'
 tags:
 - Python
 - virology
