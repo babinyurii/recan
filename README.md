@@ -1,5 +1,6 @@
 # recan
-`recan` is a Python package to test nucleotide sequences for recombination events using distance plots. This method has been previously implemented in desktop software tools: RAT[1], Simplot[2] and RDP4 [8]. 
+`recan` is a Python package which allows to construct genetic distance plots to explore and discover recombination events in viral genomes. This method has been previously implemented in desktop software tools: RAT[1], Simplot[2] and RDP4 [8]. 
+
 
 ## Requirements
 To use `recan`, you will need:
