@@ -149,7 +149,8 @@ If there are about 20 or 30 sequences in the input file and their names are long
 
 ![hbv_short_names](pictures/short_names.png)
 
-Here are some examples of recombinations previously described to illustrate how typical breakpoints may look like.
+To illustrate how typical breakpoints may look like, here are shown some examples of  previously described recombinations in the genomes of different viruses.  
+
 Putative recombinations in the of 145000 bp genome of lumpy skin disease virus [4]:
 
 ![lsdv](pictures/lsdv_rec_sar.png)
