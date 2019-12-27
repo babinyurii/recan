@@ -50,7 +50,7 @@ After you've created the object you can draw the similarity plot.
 Call the method `simgen()` of the Simgen object to draw the plot. Pass the following parameters to the method:
 - `window`: sliding window size. The number of nucleotides the sliding window will span. It has the value of 500 by default.
 - `shift`: this is the step our window slides downstream the alignment. It's value is set to 250 by default
-- `pot_rec`: the index of the potential recombinant: use method `get_info()` to get the indices, especially if your alignment has many sequences. All the other sequences will be plotted as function of distance to that sequence.
+- `pot_rec`: the index of the potential recombinant.  All the other sequences will be plotted as function of distance to that sequence. Use method `get_info()` to get the indices, especially if your alignment has many sequences.
 
 The isolate of Ba genotype is the recombinant between the virus of C genotype and genotype Bj. Let's plot it. We set genotype Ba as the potential recombinant : 
 
@@ -170,7 +170,7 @@ Norovirus recombinant isolate [7]:
 2. https://sray.med.som.jhmi.edu/SCRoftware/simplot/ 
 3.  Hepatitis B Virus of Genotype B with or without Recombination with Genotype C over the Precore Region plus the Core Gene. Fuminaka Sugauchi et al. JOURNAL OF VIROLOGY, June 2002, p. 5985–5992. 10.1128/JVI.76.12.5985-5992.2002 https://jvi.asm.org/content/76/12/5985
 4. Sprygin A, Babin Y, Pestova Y, Kononova S, Wallace DB, Van Schalkwyk A, et al. (2018) Analysis and insights into recombination signals in lumpy skin disease virus recovered in the field. PLoS ONE 13(12): e0207480. https://doi.org/ 10.1371/journal.pone.0207480
-5. Liitsola,K., Holm,K., Bobkov,A., Pokrovsky,V., Smolskaya,T., Leinikki,P., Osmanov,S. and Salminen,M. (2000) An AB recom- binant and its parental HIV type 1 strains in the area ofthe former Soviet Union: low requirements for sequence identity in recom- bination. UNAIDS Virus Isolation Network. AIDS Res. Hum. Retroviruses, 16, 1047–1053.
+5. Liitsola, K., Holm K., Bobkov, A., Pokrovsky, V., Smolskaya,T., Leinikki,P., Osmanov,S. and Salminen,M. (2000) An AB recombinant and its parental HIV type 1 strains in the area of the former Soviet Union: low requirements for sequence identity in recombination. UNAIDS Virus Isolation Network. AIDS Res. Hum. Retroviruses, 16, 1047–1053.
 6. Smith, D. B., Bukh, J., Kuiken, C., Muerhoff, A. S., Rice, C. M., Stapleton, J. T., & Simmonds, P. (2014). Expanded classification of hepatitis C virus into 7 genotypes and 67 subtypes: Updated criteria and genotype assignment web resource. Hepatology, 59(1), 318–327. https://doi.org/10.1002/hep.26744
 7. Jiang,X., Espul,C., Zhong,W.M., Cuello,H. and Matson,D.O. (1999) Characterization of a novel human calicivirus that may be a naturally occurring recombinant. Arch. Virol., 144, 2377–2387.
 8. Martin, D. P., Murrell, B., Golden, M., Khoosal, A., & Muhire, B. (2015). RDP4: Detection and analysis of recombination patterns in virus genomes. Virus Evolution, 1(1), 1–5. https://doi.org/10.1093/ve/vev003
