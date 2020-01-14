@@ -8,7 +8,7 @@ authors:
 - name: Yuriy Babin
   orcid: 0000-0002-7524-5921
   affiliation: "1"
-affiliations:
+affiliations: National Medical Research Center for Tuberculosis and Infectious Diseases
 - name: 
   index: 1
 date: 29 November 2019
