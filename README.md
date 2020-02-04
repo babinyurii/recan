@@ -26,7 +26,7 @@ from recan.simgen import Simgen
 
 create an object of the Simgen class. To initialize the object pass your alignment in fasta format as an argument:
 ```python
-sim_obj = Simgen("./data/hbv_C_Bj_Ba.fasta")
+sim_obj = Simgen("./datasets/hbv_C_Bj_Ba.fasta")
 ```
 The input data are taken from the article by Sugauchi et al.(2002). This paper describes recombination event observed in hepatitis B virus isolates.
 
