@@ -17,6 +17,8 @@ To install the package via `pip` run :
 $ pip install recan
 `
 
+If you are going to use `recan` in JupyterLab, follow [the insctructions to install the Jupyter Lab Plotly renderer](https://plot.ly/python/getting-started/#jupyterlab-support-python-35)
+
 ## Usage example
 The package is intended to be used in Jupyter notebook.  
 Import `Simgen` class from the recan package:
