@@ -58,7 +58,7 @@ The isolate of Ba genotype is the recombinant between the virus of C genotype an
 sim_obj.simgen(window=200, shift=50, pot_rec=1)
 ```
 
-![hbv_1](pictures/hbv_1.png)
+![hbv_1](pictures/HBV_1_rec_C_B_annotated.JPG)
 
 
 Potential recombinant is not shown in the plot, as the distances are calculated relative to it. The higher is the distance function (i.e. the closer to 1), the closer is the sequence to the recombinant and vice versa. 
