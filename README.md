@@ -166,6 +166,14 @@ HCV intergenotype recombinant 2k/1b [6]:
 Norovirus recombinant isolate [7]:
 ![norovirus](https://raw.githubusercontent.com/babinyurii/recan/master/pictures/norovirus_rec.png)
 
+## Automated tests
+To verify the installation, go to the `test` folder and run:
+
+`
+$ pytest test.py
+`
+
+
 **references**
 
 1. Recombination Analysis Tool (RAT): a program for the high-throughput detection of recombination. Bioinformatics, Volume 21, Issue 3,
