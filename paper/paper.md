@@ -32,10 +32,6 @@ The HIV alignment contained  twenty five 3135 bp sequences ; The HCV alignment c
 # Availability and implementation
 Recan is supported on Linux and Windows. The package can be installed by pip Python package manager using pip install recan command. The source code, guide and datasets are available on the GitHub repository (https://github.com/babinyurii/recan). 
 
-# Acknowledgement 
-The author thanks Alexander Sprygin for editing the manuscript and providing LSDV data.
-
-
 ![](https://raw.githubusercontent.com/babinyurii/recan/master/paper_plots/hiv_rec_kal153.png)
 _Figure 1. HIV recombinant strain AF193276 between sequences AF193275 and AF193278._
 
@@ -51,5 +47,7 @@ _Figure 3. Norovirus  recombinant AF190817 between parental sequences U22498 and
 ![](https://raw.githubusercontent.com/babinyurii/recan/master/paper_plots/lsdv_rec_sar.png)
 _Figure 4. LSDV recombinant vaccine-like strain LSDV RUSSIA/Saratov/2017 between sequences AF193275 and KY829023._
 
+# Acknowledgement 
+The author thanks Alexander Sprygin for editing the manuscript and providing LSDV data.
 
 # References
