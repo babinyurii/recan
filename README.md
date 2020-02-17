@@ -167,10 +167,15 @@ Norovirus recombinant isolate [7]:
 ![norovirus](https://raw.githubusercontent.com/babinyurii/recan/master/pictures/norovirus_rec.png)
 
 ## Automated tests
-To verify the installation, go to the `test` folder and run:
+To verify the installation, go to the `recan/test/` folder and run:
 
 `
 $ pytest test.py
+`
+or
+
+`
+$ python -m unittest test.py
 `
 
 
