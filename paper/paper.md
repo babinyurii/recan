@@ -9,7 +9,7 @@ authors:
   orcid: 0000-0002-7524-5921
   affiliation: "1"
 affiliations: 
-- name: National Medical Research Center for Tuberculosis and Infectious Diseases
+- name: National Medical Research Center for Tuberculosis and Infectious Diseases, Moscow, Russia
   index: 1
 date: 29 November 2019
 bibliography: paper.bib
