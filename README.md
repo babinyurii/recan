@@ -180,6 +180,11 @@ $ python -m unittest test.py
 `
 
 
+## Example datasets
+To download the datasets use the following link:
+https://drive.google.com/drive/folders/1v2lg5yUDFw_fgSiulsA1uFeuzoGz0RjH?usp=sharing
+
+
 ## References
 
 1. Recombination Analysis Tool (RAT): a program for the high-throughput detection of recombination. Bioinformatics, Volume 21, Issue 3,
