@@ -1,3 +1,4 @@
+[![DOI](https://joss.theoj.org/papers/10.21105/joss.02014/status.svg)](https://doi.org/10.21105/joss.02014)
 # recan
 `recan` is a Python package which allows to construct genetic distance plots to explore and discover recombination events in viral genomes. This method has been previously implemented in desktop software tools: RAT[1], Simplot[2] and RDP4 [8]. 
 
