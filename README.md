@@ -1,4 +1,21 @@
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.02014/status.svg)](https://doi.org/10.21105/joss.02014)
+
+[recan](#recan)
+
+[Requirements](#requirements)
+
+[Intallation](#intallation)
+
+[Usage example](#usage-example)
+
+[Automated tests](#automated-tests)
+
+[Example datasets](#example-datasets)
+
+[References](#references)
+
+[Citations](#citations)
+
 # recan
 `recan` is a Python package which allows to construct genetic distance plots to explore and discover recombination events in viral genomes. This method has been previously implemented in desktop software tools: RAT[1], Simplot[2] and RDP4 [8]. 
 
@@ -198,4 +215,8 @@ https://drive.google.com/drive/folders/1v2lg5yUDFw_fgSiulsA1uFeuzoGz0RjH?usp=sha
 7. Jiang,X., Espul,C., Zhong,W.M., Cuello,H. and Matson,D.O. (1999) Characterization of a novel human calicivirus that may be a naturally occurring recombinant. Arch. Virol., 144, 2377–2387.
 8. Martin, D. P., Murrell, B., Golden, M., Khoosal, A., & Muhire, B. (2015). RDP4: Detection and analysis of recombination patterns in virus genomes. Virus Evolution, 1(1), 1–5. https://doi.org/10.1093/ve/vev003
 
+## Citations
+
+Zimerman RA, Ferrareze PAG, Cadegiani FA, Wambier CG, Fonseca DdN, de Souza AR, Goren A, Rotta LN, Ren Z and Thompson CE (2022) Comparative Genomics and
+Characterization of SARS-CoV-2 P.1 (Gamma) Variant of Concern From Amazonas, Brazil. Front. Med. 9:806611. doi: 10.3389/fmed.2022.806611
 
