@@ -7,6 +7,7 @@ Created on Mon Aug 22 12:56:47 2022
 import plotly.graph_objs as go
 from plotly.offline import init_notebook_mode, iplot
 from rolling_window import RollingWindowOnAlignment
+from calc_pairwise_distance import calc_pairwise_distance
 
 
 class Simgen():
@@ -124,7 +125,20 @@ class Simgen():
         
         self._prepare_distance_data()
         
-        self._calculate_distance()
+        for window_borders, alignment_slice in self.align_sliced.items():
+            for seq in alignment_slice:
+                if seq.id == self.pot_rec_id:
+                    continue
+                
+                seq1 = alignment_slice[self.pot_rec_index].seq
+                seq2 = seq.seq
+            
+                distance = calc_pairwise_distance(seq1=seq1, seq2=seq2, 
+                                                 dist_method=dist)
+                
+                self.distance_data[seq.id].append(distance)
+        
+        #self._calculate_distance()
         
         self._plot_distance_by_plotly()
         
