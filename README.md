@@ -191,12 +191,6 @@ To verify the installation, go to the `recan/test/` folder and run:
 $ pytest test.py
 `
 
-or
-
-`
-$ python -m unittest test.py
-`
-
 
 ## Example datasets
 To download the datasets use the following link:
