@@ -1,0 +1,14 @@
+>s1_ref
+ATGCATGCAT
+>s2_dist_0
+ATGCATGCAT
+>s3_dist_10
+TTGCATGCAT
+>s4_dist_50
+GGCGGTGCAT
+>s5_dist_90
+GGCGGGGGGG
+>s5_dist_100
+GGCGGGCGGG
+
+
