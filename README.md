@@ -17,7 +17,7 @@
 [Citations](#citations)
 
 # recan
-`recan` is a Python package which allows to construct genetic distance plots to explore and discover recombination events in viral genomes. This method has been previously implemented in desktop software tools: RAT[1], Simplot[2] and RDP4 [8]. 
+`recan` [9] is a Python package which allows to construct genetic distance plots to explore and discover recombination events in viral genomes. This method has been previously implemented in desktop software tools: RAT[1], Simplot[2] and RDP4 [8]. 
 
 
 ## Requirements
@@ -214,6 +214,8 @@ https://drive.google.com/drive/folders/1v2lg5yUDFw_fgSiulsA1uFeuzoGz0RjH?usp=sha
 6. Smith, D. B., Bukh, J., Kuiken, C., Muerhoff, A. S., Rice, C. M., Stapleton, J. T., & Simmonds, P. (2014). Expanded classification of hepatitis C virus into 7 genotypes and 67 subtypes: Updated criteria and genotype assignment web resource. Hepatology, 59(1), 318–327. https://doi.org/10.1002/hep.26744
 7. Jiang,X., Espul,C., Zhong,W.M., Cuello,H. and Matson,D.O. (1999) Characterization of a novel human calicivirus that may be a naturally occurring recombinant. Arch. Virol., 144, 2377–2387.
 8. Martin, D. P., Murrell, B., Golden, M., Khoosal, A., & Muhire, B. (2015). RDP4: Detection and analysis of recombination patterns in virus genomes. Virus Evolution, 1(1), 1–5. https://doi.org/10.1093/ve/vev003
+9. Babin, Y., (2020). Recan: Python tool for analysis of recombination events in viral genomes. Journal of Open Source Software, 5(49), 2014.
+https://doi.org/10.21105/joss.02014
 
 ## Citations
 
