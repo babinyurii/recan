@@ -1,13 +1,16 @@
 from Bio import AlignIO
 
 class RollingWindowOnAlignment():
+    """
+    alignment obj as the biopython multiple alignment
+    has two sliding window methods that slice the alignment into sections
+    """
     
     def __init__(self, in_file):
         self.align = AlignIO.read(in_file, "fasta")
         
     def roll_window_along_alignment(self, window_len, window_step):
-    
-        
+     
         window_start = 0
         window_end = window_len
         window_step = window_step
@@ -32,6 +35,7 @@ class RollingWindowOnAlignment():
             window_counter += 1
 
         return sliced_alignment 
+    
     
     def roll_window_along_alignment_region(self, window_len, window_step, region):
     

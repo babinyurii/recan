@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Tue Aug 23 12:26:58 2022
 
-@author: yuriy
-"""
 
 from math import log, sqrt
 
@@ -21,7 +17,7 @@ H	Not G	A/C/T
 V	Not T	A/C/G
 N	Any	A/C/G/T
 """
-DEGENERATE_NUCS = ["U", "W", "S", "M", "K", "R", "Y", "B", "D", "H", "V", "N"]
+DEGENERATE_NUCS = ("U", "W", "S", "M", "K", "R", "Y", "B", "D", "H", "V", "N")
 
 def estimate_nucleotide_frequencies(seq):
     
@@ -57,15 +53,20 @@ def p_distance(seq1, seq2):
     
     try:
         distance = float(different_nucs / total_nucs)
-    except ValueError:
-        print("zero division. please, check your alignment for gaps")
+        
+        return distance
     
-    return distance
+    except ValueError:
+        print("""the reasons for the ValueError maybe: 1. too many gaps in some
+              region of the alignment. 2. too short window span""")
+    
         
     
     
 def jc_distance(seq1, seq2):
+    
     """ 
+    Jukes-Cantor 
     jc_distance = - b log(1 - p_dist / b)
     ------------
     b is a constant. b = 3/4 for nucleotides and 19/20 for proteins.
@@ -76,11 +77,13 @@ def jc_distance(seq1, seq2):
     
     try: 
         distance = - b * log(1 - p_dist / b)
-    except ValueError: 
-        print ("Tried to take log of a negative number")
         
-    return distance
-
+        return distance
+    
+    except ValueError: 
+        print("""the reasons for the ValueError maybe: 1. too many gaps in some
+              region of the alignment. 2. too short window span""")
+        
 
        
 def k2p_distance(seq1,seq2):
@@ -117,12 +120,14 @@ def k2p_distance(seq1,seq2):
     
     try: 
         distance = -0.5 * log((1 - 2 * ts_freq - tv_freq) * sqrt( 1 - 2 * tv_freq ))
-    except ValueError: 
-        print ("Tried to take log of a negative number")
         
-    return distance 
-  
-
+        return distance
+    
+    except ValueError: 
+        print("""the reasons for the ValueError maybe: 1. too many gaps in some
+              region of the alignment. 2. too short window span""")
+        
+     
 def tamura_distance(seq1,seq2):
     """
     Tamura distance = -C log( 1 - P/C - Q ) - 0.5( 1 - C )log( 1 - 2Q )
@@ -165,12 +170,14 @@ def tamura_distance(seq1,seq2):
 
     try: 
         distance = -c * log( 1 - ts_freq / c - tv_freq) - 0.5 * ( 1 - c ) * log ( 1 - 2 * tv_freq )
-    except ValueError: 
-        print("Tried to take log of a negative number")
         
-    return distance
-
-
+        return distance
+    
+    except ValueError: 
+        print("""the reasons for the ValueError maybe: 1. too many gaps in some
+              region of the alignment. 2. too short window span""")
+        
+    
 # TODO tajima nei isn't included still
 def tn_distance(seq1, seq2):
     """ 
@@ -203,14 +210,16 @@ def tn_distance(seq1, seq2):
             h += 0.5*Xij_sq/GiGj  #h value used to calculate b
     
     b = 0.5*(1-sum([x**2 for x in G])+p**2/h)
-    try: d = -b * log(1 - p/b)
+    
+    try: 
+        d = -b * log(1 - p/b)
+        return d 
+    
     except ValueError: 
-        print ("Tried to take log of a negative number")
-        return None
-    return d    
-
-
-
+        print("""the reasons for the ValueError maybe: 1. too many gaps in some
+              region of the alignment. 2. too short window span""")
+        
+       
 def calc_pairwise_distance(seq1, seq2, dist_method):
     
     if dist_method == "pdist":
@@ -227,11 +236,8 @@ def calc_pairwise_distance(seq1, seq2, dist_method):
     
     #elif dist_method == "tnd":
     #    distance = tn_distance(seq1, seq2)
-       
-    
+           
     return 1 - distance
-
-
 
 
 

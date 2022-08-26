@@ -1,9 +1,5 @@
 # -*- coding: utf-8 -*-
-"""
-Created on Mon Aug 22 12:56:47 2022
 
-@author: yuriy
-"""
 import plotly.graph_objs as go
 import pandas as pd
 from plotly.offline import init_notebook_mode, iplot
@@ -46,6 +42,11 @@ class Simgen():
         
         
     def _get_ticks_for_x_axis(self):
+        """
+        prepares ticks for x axis
+        the ticks correspond to the alignment nucleotide positions
+        the ticks for x axis are in the middle of the rolling window
+        """
         
         self.ticks_for_x_axis.clear()
         
@@ -57,6 +58,9 @@ class Simgen():
             
     
     def _get_pot_rec_id(self):
+        """ get id of the potential recombinant from
+        the alignment slices
+        """
         
         for slice in self.align_sliced.values():
             slice_0 = slice
@@ -68,6 +72,12 @@ class Simgen():
     
     def _prepare_distance_data(self):
         
+        """ makes dictionary for distance data collection
+        keys are sequences names (ids from the alignment)
+        values are lists of distances to the potential recombinant
+        """
+        self.distance_data = {}
+        
         for slice in self.align_sliced.values():
             slice_0 = slice
             break
@@ -78,26 +88,37 @@ class Simgen():
             self.distance_data[seq.id] = []
             
     
-    def _calculate_distance(self):
-        
-        #print(self.align_sliced)
-        
-        for window_borders, alignment_slice in self.align_sliced.items():
-            for seq in alignment_slice:
-                if seq.id == self.pot_rec_id:
-                    continue
-            
-                distance = self._pdistance(alignment_slice[self.pot_rec_index], seq.seq)
-                self.distance_data[seq.id].append(distance)
-        
-            
-        
-    
     
     def simgen(self, pot_rec, window, shift, region=False, dist="pdist"):
-        
+        """
+        Parameters
+        ----------
+        pot_rec : int
+            index of the potential recombinant in the alignment.
+        window : int
+            sliding window size.
+        shift : int
+            sliding window shift along the alignment.
+        region : list or tuple, optional
+             The default is False. start and end of the region
+             to analyze, f.e. (1000, 3000)
+        dist : str, optional
+            the distance calculation method. default is "pdist". 
+            
+            available methods:
+            pdist - pairwise distance (default)
+            jcd - Jukes-Cantor distance
+            k2p -  Kimura 2-parameter distance
+            td - Tamura distance
+            
+        Returns
+        -------
+        None.
+
+        """
         
         if region:
+            assert region[0] < region[1], "start of the region must be less than the region end"
             self.align_sliced = self.alignment_roll_window.roll_window_along_alignment_region(window_len=window, 
                                                                           window_step=shift,
                                                                           region=region)
@@ -108,14 +129,6 @@ class Simgen():
         self._get_pot_rec_id()
         self._get_ticks_for_x_axis()
         self._prepare_distance_data()
-        
-        
-        #for key, value in self.align_sliced.items():
-        #    print(key, value)
-        
-        #for i in self.ticks_for_x_axis:
-        #    print(i)
-       
         
         
         for window_borders, alignment_slice in self.align_sliced.items():
@@ -160,9 +173,7 @@ class Simgen():
         df = pd.DataFrame.from_dict(self.distance_data, 
                                     orient='index',
                                     columns=columns)
-        #print(df)
-        #print(self.ticks_for_x_axis)
-        #df = pd.DataFrame(data=self.distance_data, index=self.ticks_for_x_axis[:]).T
+       
         if path:
             if out == "csv":
                 df.to_csv(out_name + ".csv")
@@ -174,20 +185,7 @@ class Simgen():
             else:
                 print("invalid output file format")
         
-        #for key in self.align_sliced.keys():
-        #    print(key)
-        
-        #print(self.ticks_for_x_axis)
-        #print(self.align_sliced.keys())
-        #data_to_zip = None
-        #for key, value in self.distance_data.items():
-        #    data_to_zip = value
-        #    break
-        
-        #list_to_zip = list(zip(self.ticks_for_x_axis, data_to_zip))
-        
-        #for i in list_to_zip:
-        #    print(i)
+   
         
         
     def get_data(self, df=True):
@@ -209,7 +207,7 @@ class Simgen():
     def get_info(self):
         """outputs information about the alignment: 
         index (which is the row number), 
-        sequence names, and alignment lengths"""
+        sequence names, and alignment length"""
         
         print("index:", "sequence id:", sep="\t")
         for seq_index, seq in enumerate(self.alignment_roll_window.align):
@@ -218,13 +216,4 @@ class Simgen():
       
         
         
-        
-        
-        
-        
-       
-    
-
-    
-    
     
