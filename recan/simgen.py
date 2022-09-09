@@ -147,7 +147,7 @@ class Simgen():
         
         
         
-    def save_data(self, path=False, out="csv", out_name="distance_data",
+    def save_data(self, path=False, out_name="distance_data",
                   data_cols="plot_ticks"):
         """saves the data spreadsheet as a csv file
         Parameters
@@ -175,15 +175,9 @@ class Simgen():
                                     columns=columns)
        
         if path:
-            if out == "csv":
-                df.to_csv(out_name + ".csv")
-            else:
-                print("invalid output file")
+            df.to_csv(out_name + ".csv")
         else:
-            if out == "csv":
-                df.to_csv(out_name + ".csv")
-            else:
-                print("invalid output file format")
+            df.to_csv(out_name + ".csv")
         
    
         
@@ -196,6 +190,10 @@ class Simgen():
             True: returns pandas DataFrame object
             False: returns a dictionary where keys are the sequence ids and 
             values are distance data
+                
+        Returns
+        -------
+        pandas dataframe
         
         """
         if df:
