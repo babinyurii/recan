@@ -193,6 +193,11 @@ HCV intergenotype recombinant 2k/1b [6]:
 Norovirus recombinant isolate [7]:
 ![norovirus](https://raw.githubusercontent.com/babinyurii/recan/master/pictures/norovirus_rec.png)
 
+
+## Some note on usage
+- the optimal window size is about 200-250 bp, the optimal window shift is typicall about 50-150 bp
+- now distance calculation skips degenerate nucleotides and gaps and they do not influence the distance values
+
 ## Automated tests
 To verify the installation, go to the `recan/test/` folder and run:
 
