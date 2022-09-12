@@ -196,7 +196,7 @@ Norovirus recombinant isolate [7]:
 ![norovirus](https://raw.githubusercontent.com/babinyurii/recan/master/pictures/norovirus_rec.png)
 
 
-## Some note on usage
+## Some notes on usage
 - the optimal window size is about 200-250 bp, the optimal window shift is typicall about 50-150 bp
 - now distance calculation skips degenerate nucleotides and gaps and they do not influence the distance values
 
