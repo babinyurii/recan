@@ -3,8 +3,8 @@
 import plotly.graph_objs as go
 import pandas as pd
 from plotly.offline import init_notebook_mode, iplot
-from rolling_window import RollingWindowOnAlignment
-from calc_pairwise_distance import calc_pairwise_distance
+from .rolling_window import RollingWindowOnAlignment
+from .calc_pairwise_distance import calc_pairwise_distance
 
 
 class Simgen():
@@ -147,7 +147,7 @@ class Simgen():
         
         
         
-    def save_data(self, path=False, out_name="distance_data",
+    def save_data(self, path=False, out="csv", out_name="distance_data",
                   data_cols="plot_ticks"):
         """saves the data spreadsheet as a csv file
         Parameters
@@ -175,9 +175,15 @@ class Simgen():
                                     columns=columns)
        
         if path:
-            df.to_csv(out_name + ".csv")
+            if out == "csv":
+                df.to_csv(out_name + ".csv")
+            else:
+                print("invalid output file")
         else:
-            df.to_csv(out_name + ".csv")
+            if out == "csv":
+                df.to_csv(out_name + ".csv")
+            else:
+                print("invalid output file format")
         
    
         
@@ -190,10 +196,6 @@ class Simgen():
             True: returns pandas DataFrame object
             False: returns a dictionary where keys are the sequence ids and 
             values are distance data
-                
-        Returns
-        -------
-        pandas dataframe
         
         """
         if df:
