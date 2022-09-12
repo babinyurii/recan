@@ -8,6 +8,8 @@
 
 [Usage example](#usage-example)
 
+[Some notes on usage](#some-notes-on-usage)
+
 [Automated tests](#automated-tests)
 
 [Example datasets](#example-datasets)
