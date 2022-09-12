@@ -170,9 +170,9 @@ Parameters for distance calculation methods:
 sim_obj.simgen(window=200, shift=50, pot_rec=1, region=(1000, 2700), dist='k2p')
 ```
 
-to save the distance data in excel or csv format use the method `save_data()`:
+to save the distance data in csv format use the method `save_data()`:
 ```python
-sim_obj.save_data(out="excel", out_name="hbv_distance_data")
+sim_obj.save_data(out_name="hbv_distance_data")
 ```
 If there are about 20 or 30 sequences in the input file and their names are long, legend element may hide the plot. So, to be able to analyze many sequences at once, it's better to use short consice sequence names instead of long ones. Like this:
 
