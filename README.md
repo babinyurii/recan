@@ -154,7 +154,16 @@ plt.show()
 ![hbv_matplotlib](https://raw.githubusercontent.com/babinyurii/recan/master/pictures/hbv_matplotlib.png)
 
 
-`simgen()` method has optional parameter `dist` which denoted method used to calculate pairwise distance. By default its value is set to `pdist`, so `simgen()` calculates simple pairwise distance. To use Kimura 2 parameter distance set the value of this parameter to `k2p`
+`simgen()` method has optional parameter `dist` which denoted method used to calculate pairwise distance. By default its value is set to `pdist`, so `simgen()` calculates simple pairwise distance. 
+
+Parameters for distance calculation methods:
+
+- `pdist` : pairwise distance (default)
+- `jcd` : Jukes-Cantor distance
+- `k2p` :  Kimura 2-parameter distance
+- `td` : Tamura distance
+
+
 
 
 ```python
