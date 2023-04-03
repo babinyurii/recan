@@ -2,6 +2,8 @@
 
 [recan](#recan)
 
+[recan web version](#recan web version)
+
 [Requirements](#requirements)
 
 [Intallation](#intallation)
@@ -29,6 +31,10 @@ To use `recan`, you will need:
 - plotly 
 - pandas
 - Jupyter notebook
+
+## recan web version
+recan django-based web version is currently under development
+https://github.com/babinyurii/recan_gui
 
 ## Intallation
 To install the package via `pip` run :
