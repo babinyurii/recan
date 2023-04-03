@@ -2,7 +2,7 @@
 
 [recan](#recan)
 
-[recan web version](#recan web version)
+[recan web version](#recan-web-version)
 
 [Requirements](#requirements)
 
