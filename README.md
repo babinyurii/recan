@@ -229,6 +229,6 @@ https://doi.org/10.21105/joss.02014
 
 ## Citations
 
-Zimerman RA, Ferrareze PAG, Cadegiani FA, Wambier CG, Fonseca DdN, de Souza AR, Goren A, Rotta LN, Ren Z and Thompson CE (2022) Comparative Genomics and
+1. Zimerman RA, Ferrareze PAG, Cadegiani FA, Wambier CG, Fonseca DdN, de Souza AR, Goren A, Rotta LN, Ren Z and Thompson CE (2022) Comparative Genomics and
 Characterization of SARS-CoV-2 P.1 (Gamma) Variant of Concern From Amazonas, Brazil. Front. Med. 9:806611. doi: 10.3389/fmed.2022.806611
-
+2. In book: Proceedings of the 4th International Conference on Big Data Analytics for Cyber-Physical System in Smart City - Volume 2. Chapter: Python Data Analysis Techniques in Administrative Information Integration Management System April 2023 DOI: 10.1007/978-981-99-1157-8_35
