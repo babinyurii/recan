@@ -233,7 +233,7 @@ https://drive.google.com/drive/folders/1v2lg5yUDFw_fgSiulsA1uFeuzoGz0RjH?usp=sha
 9. Babin, Y., (2020). Recan: Python tool for analysis of recombination events in viral genomes. Journal of Open Source Software, 5(49), 2014.
 https://doi.org/10.21105/joss.02014
 
-## Citations
+## recan citations
 
 1. Zimerman RA, Ferrareze PAG, Cadegiani FA, Wambier CG, Fonseca DdN, de Souza AR, Goren A, Rotta LN, Ren Z and Thompson CE (2022) Comparative Genomics and
 Characterization of SARS-CoV-2 P.1 (Gamma) Variant of Concern From Amazonas, Brazil. Front. Med. 9:806611. doi: 10.3389/fmed.2022.806611
