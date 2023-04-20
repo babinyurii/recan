@@ -36,6 +36,9 @@ To use `recan`, you will need:
 recan django-based web version is currently under development
 https://github.com/babinyurii/recan_gui
 
+test version available at:
+http://yuriyb.pythonanywhere.com/
+
 ## Intallation
 To install the package via `pip` run :
 
