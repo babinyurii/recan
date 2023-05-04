@@ -14,7 +14,7 @@ setup(
   long_description = long_description,  # added to package readme on pypi
   long_description_content_type = "text/markdown",  # added to package readme on pypi
   packages = ['recan'],   
-  version = '0.5'
+  version = '0.5',
   license='MIT',        
   description = 'recan: recombination analysis tool',   
   author = 'Yuriy Babin',                  
