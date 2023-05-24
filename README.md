@@ -1,4 +1,5 @@
 [![DOI](https://joss.theoj.org/papers/10.21105/joss.02014/status.svg)](https://doi.org/10.21105/joss.02014)
+[![PyPI version](https://badge.fury.io/py/recan.svg)](https://badge.fury.io/py/recan)
 
 [Recan](#recan)
 
