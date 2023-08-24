@@ -1,6 +1,6 @@
 from os import path
-from distutils.core import setup
 import setuptools 
+from setuptools import setup
 
 
 this_directory = path.abspath(path.dirname(__file__))
