@@ -28,6 +28,9 @@
 Recan django-based web version is currently under development
 https://github.com/babinyurii/recan_gui
 
+It is available at:
+http://yuriyb.pythonanywhere.com/
+
 ## Requirements
 To use `recan`, you will need:
 - Python 3
@@ -37,8 +40,7 @@ To use `recan`, you will need:
 - Jupyter notebook
 
 
-test version available at:
-http://yuriyb.pythonanywhere.com/
+
 
 ## Intallation
 To install the package via `pip` run :
