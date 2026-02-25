@@ -26,7 +26,7 @@
 
 ## Recan web version
 Recan django-based web version is currently available at:
-https://github.com/babinyurii/recan_gui
+https://yuriyb.pythonanywhere.com
 
 
 ## Requirements
