@@ -243,3 +243,4 @@ https://doi.org/10.21105/joss.02014
 2. In book: Proceedings of the 4th International Conference on Big Data Analytics for Cyber-Physical System in Smart City - Volume 2. Chapter: Python Data Analysis Techniques in Administrative Information Integration Management System April 2023  https://doi.org/10.1007/978-981-99-1157-8_35
 3. Substantial viral diversity in bats and rodents from East Africa: insights into evolution, recombination, and cocirculation. Daxi Wang et al. 2024. Microbiome (2024) 12:72 https://doi.org/10.1186/s40168-024-01782-4
 4. Identification of Recombinant Aichivirus D in Cattle, Italy.Pellegrini, F et al. I Animals 2024, 14, 3315. https://doi.org/10.3390/ani14223315
+5. Detection of H5N1-Related PB1 Sequences in a Low Pathogenic H11N2 Virus from South American Migratory Shorebirds. Jansen de Araujo et al. Viruses 2026, 18(7), 710; https://doi.org/10.3390/v18070710
